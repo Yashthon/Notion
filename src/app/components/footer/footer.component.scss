@@ -1,0 +1,56 @@
+.bg{
+    background-color: #171c28;
+    margin-top: 50px;
+}
+.text-title{
+    color: #ccc;
+    text-align: center;
+    font-size: large;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 10px;
+    padding-bottom: 4%;
+    padding-top: 1%;
+}
+.grid { 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+    border: 1px solid white;
+    align-items:center;
+    text-align: justify;
+    }
+
+  .grid > article img {
+    max-width: 100%;
+  }
+
+  .text {
+    padding: 0 20px 20px;
+    color: #ccc;
+  }
+
+  h3{
+    font-size: medium;
+    text-align: center;
+    letter-spacing: 5px;
+  }
+
+  .text > button {
+    border: 0;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    }
+
+    a:link{
+      color: white !important;
+      background-color: transparent;
+      text-decoration: none;
+    }
+
+// mat-card{
+//   position: fixed;
+//   left: 0;
+//   bottom: 0;
+//   width: 100%;
+// }

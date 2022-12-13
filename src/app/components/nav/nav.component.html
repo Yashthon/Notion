@@ -1,0 +1,80 @@
+<mat-toolbar class="ftco-navbar-light">
+
+    <a href="/"><img src="../assets/images/logo_feather.svg"/></a>
+
+    <span class="example-spacer"></span>
+    
+    <!-- <span class="genre-spacer">Food</span>
+    <span class="genre-spacer">Food</span>
+    <span class="genre-spacer">More
+      <mat-icon style="padding-top: 2%;">expand_more</mat-icon>
+    </span> -->
+    <!-- <span class="genre-spacer">
+      <div class="container">
+        <div class="codrops-top clearfix">
+          <a class="codrops-icon codrops-icon-prev" href="http://tympanus.net/Development/ModalWindowEffects/"><span>Previous Demo</span></a>
+          <span class="right"><a class="codrops-icon codrops-icon-drop" href="http://tympanus.net/codrops/?p=15599"><span>Back to the Codrops Article</span></a></span>
+        </div>
+        <header>
+          <h1>Expanding Search Bar Deconstructed <span>A click-to-expand search input</span></h1>
+        </header>
+        <div class="main clearfix">
+          <div class="column">
+            <p>The search bar can be opened on click, it has a fluid width and it's mobile-friendly.</p>
+            <p><a href="http://tympanus.net/codrops/?p=15599">Read the tutorial</a></p>
+          </div>
+          <div class="column">
+            <div id="sb-search" class="sb-search">
+              <form>
+                <input class="sb-search-input" placeholder="Enter your search term..." type="search" name="search" id="search">
+                <input class="sb-search-submit" type="submit" value="">
+                <span class="sb-icon-search"></span>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="/src/app/js/classie.js"></script>
+      <script src="/src/app/js/uisearch.js"></script>
+      <script>
+        new UISearch( document.getElementById( 'sb-search' ) );
+      </script>
+    </span> -->
+
+    
+    <ng-container *ngIf="user$ | async as user; else loginButton">
+      <button mat-button [matMenuTriggerFor]="userMenu">
+        <img
+          width="30"
+          height="30"
+          class="profile-image-toolbar"
+          [src]="user.photoURL ?? 'assets/images/User.png'"
+        />
+        {{ user.displayName }}
+        <mat-icon>expand_more</mat-icon>
+      </button>
+    </ng-container>
+    <ng-template #loginButton>
+      <button class="loginBtn" mat-button routerLink="login">
+  <mat-icon style="font-weight: 200px;"> <font style="color: #1e50b5; font-weight: 200px;">login</font> </mat-icon>
+  <font style="color: #1e50b5;"> Login</font>
+      </button>
+      <span class="button-space"></span>
+      <button mat-button class="pill grow" routerLink="sign-up">
+        <font style="color: white;"> Sign Up</font>
+        <mat-icon><font style="color: white;">arrow_right</font></mat-icon>
+      </button>
+    </ng-template>
+  </mat-toolbar>
+
+
+<mat-menu #userMenu="matMenu">
+    
+    <button mat-menu-item (click)="logout()">
+      <mat-icon>logout</mat-icon>
+      Logout</button>  
+    <button mat-menu-item routerLink="/profile">
+      <mat-icon>account_circle</mat-icon>
+      Profile</button>  
+  </mat-menu>
+  

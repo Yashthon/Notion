@@ -1,0 +1,125 @@
+<app-nav></app-nav>
+<app-side-nav></app-side-nav>
+<!--<div class="form-container mat-elevation-z5 text-center">
+  <h1>Publish a blog</h1>
+
+  <div class="addBtn">
+    <button type="button" color="primary" (click)="add()" mat-mini-fab matTooltip="Add a Blog Post" >
+        <mat-icon>add</mat-icon>
+    </button>
+    </div>
+
+    <ng-container *ngFor="let student of postCollectiondata">
+
+    <div class="row">
+
+      <mat-form-field>
+        <input 
+        id="title"
+        matInput
+        type="text" 
+        title="title-show" 
+        [value]="student.title" 
+        required #title
+        placeholder="Blog Title">
+      </mat-form-field>
+
+      <mat-form-field>
+        <input
+        type="text"
+        matInput
+        title="stitle-show"
+        [value]="student.stitle"
+        required #stitle
+        placeholder="Subtitle"/>
+      </mat-form-field>
+
+    </div>
+
+    <div class="row">
+
+      <mat-form-field>
+        <input
+          type="text"
+          matInput
+          title="displayName-show"
+          [value]="student.displayName"
+          required #displayName
+          placeholder="Author"/>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input
+          type="textarea"
+          matInput
+          title="content-show"
+          [value]="student.content"
+          required #content
+          placeholder="Content"/>
+      </mat-form-field>
+
+    </div>
+
+    <button class="margin-top" mat-raised-button color="primary" type="button" (click)="update(student.id, title, stitle, displayName, content)">Publish</button>&nbsp;&nbsp;&nbsp;&nbsp;
+    <button class="margin-top" mat-raised-button color="primary" type="button" (click)="delete(student.id)">Delete</button>&nbsp;&nbsp;&nbsp;&nbsp;
+    <button class="margin-top" mat-raised-button color="primary" type="reset">Reset</button>&nbsp;&nbsp;&nbsp;&nbsp;
+
+    <tbody>
+        <tr *ngFor="let itm of dataSourcePost; let i = index;">
+          <th scope="row">{{i+1}}</th>
+          <td>{{itm.title}}</td>
+        </tr>
+      </tbody>
+
+</ng-container>
+</div> -->
+
+<!-- NEW DESIGN START -->
+
+<mat-vertical-stepper class="alignment" [linear]="false" #stepper>
+  <mat-step [stepControl]="firstFormGroup">
+    <form [formGroup]="firstFormGroup">
+      <ng-template matStepLabel>Title</ng-template>
+      <mat-form-field>
+        <input matInput placeholder="Blog Title" formControlName="firstCtrl" required>
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="secondFormGroup">
+    <form [formGroup]="secondFormGroup">
+      <ng-template matStepLabel>Sub - Title</ng-template>
+      <mat-form-field>
+        <input matInput placeholder="Sub - Title" formControlName="secondCtrl" required>
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="secondFormGroup">
+    <form [formGroup]="secondFormGroup">
+      <ng-template matStepLabel>Description</ng-template>
+      <mat-form-field>
+        <input matInput placeholder="Description" formControlName="secondCtrl" required>
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Done</ng-template>
+    You are now done.
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperPrevious>Publish</button>
+      <button mat-button (click)="stepper.reset()">Reset</button>
+    </div>
+  </mat-step>
+</mat-vertical-stepper>
+<!-- NEW DESIGN END -->

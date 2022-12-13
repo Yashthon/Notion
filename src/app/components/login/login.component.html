@@ -1,0 +1,35 @@
+
+   
+<div class="form-container mat-elevation-z5">
+   <a mat-icon-button>
+      <mat-icon style="font-size: xx-large;" routerLink="/">first_page</mat-icon>
+   </a>
+    <h1>Login</h1>
+    
+<form [formGroup]="loginForm" (ngSubmit)="submit()">
+    <mat-form-field>
+         <input matInput placeholder="Email" formControlName="email"/>
+         <mat-error *ngIf="email?.errors?.['required']">
+            Email required!
+         </mat-error>
+         <mat-error *ngIf="email?.errors?.['email']">
+            Please enter a valid email address
+          </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+         <input matInput placeholder="Password" formControlName="password" type="password"
+         [type]="hide ? 'password' : 'text'">
+         <a mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+         </a>
+         <mat-error *ngIf="password?.errors?.['required']">
+            Password required!
+         </mat-error>
+    </mat-form-field>
+    <div class="center margin-top">
+    <button class="bg-color text" mat-raised-button type="submit">Login</button>
+    </div>
+    <span class="center margin-top">New to our platform? <a class="sign-up-link" routerLink="/sign-up">Sign Up!</a></span>
+</form>
+
+</div>

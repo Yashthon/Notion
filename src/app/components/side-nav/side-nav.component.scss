@@ -1,0 +1,148 @@
+// ICON SIZE AND POSITIONING
+a{
+  line-height: 50px;
+  font-size: xx-large;
+}
+
+// ICON ZOOMING 
+.zoom {
+  transition: transform .2s;
+}
+
+.zoom:hover {
+  transform: scale(2);
+}
+
+// ICON ON-HOVER COLOR EFFECT
+.sidenav a {
+  padding: 4px ;
+  text-decoration: none;
+  color: #171c28;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #1E50B5;
+}
+
+.fa {
+position: fixed;
+width: fit-content;
+height: fit-content;
+vertical-align: middle;
+}
+
+
+.main-menu:hover,nav.main-menu.expanded {
+width: 65px;
+padding-left: 20px;
+margin-left: 20px;
+overflow:visible;
+align-items: center;
+}
+
+.main-menu {
+background:#fff;
+position:fixed;
+top:0;
+bottom:0;
+height: fit-content;
+left: -30px;
+width: 40px;
+transition: 0.5s;
+
+z-index:1;
+filter: drop-shadow(0.35rem 0.35rem 0.4rem #00000080);
+padding-top: 30px;
+padding-bottom: 30px;
+padding-left: 4px;
+padding-right: 8px;
+margin-top: 7%;
+border-top-right-radius: 22px;
+border-bottom-right-radius: 22px;
+}
+
+
+.main-menu li {
+position:relative;
+display:block;
+left: 0;
+}
+
+.main-menu>ul.logout {
+  position:absolute;
+  left:0;
+  margin-top: 50px;
+  bottom:0;
+  }
+
+nav ul,nav li {
+padding:0;
+}
+
+
+// BREATHING ANIMATION
+#breathing {
+  -webkit-animation: breathing 3s ease-in-out infinite normal;
+  animation: breathing 3s ease-in-out infinite normal;
+  -webkit-font-smoothing: antialiased;
+  }
+
+  #breathing:hover{
+    -webkit-animation: breathing 0s ease-in-out infinite normal;
+  animation: breathing 0s ease-in-out infinite normal;
+  }
+
+
+@-webkit-keyframes breathing {
+0% {
+  -webkit-transform: scale(0.9);
+  transform: scale(0.5);
+}
+
+25% {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+60% {
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+}
+
+100% {
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+}
+}
+
+@keyframes breathing {
+0% {
+  -webkit-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  transform: scale(0.9);
+}
+
+25% {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+60% {
+  -webkit-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  transform: scale(0.9);
+}
+
+100% {
+  -webkit-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  transform: scale(0.9);
+}
+}
+
+// TOOLTIP POSITION
+.pos{
+  margin-right: 8px;
+}

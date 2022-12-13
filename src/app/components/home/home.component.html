@@ -1,0 +1,10 @@
+<app-nav></app-nav>
+<br><br>
+<ng-container *ngIf="user$ | async as user">  
+<font style="color: #000;" >
+    <h1>Welcome!</h1>
+</font> 
+<h2 style="font-size: xx-large; color: #fff;">{{user.displayName}}!</h2>
+<app-side-nav></app-side-nav>
+<app-horizontal-scroll></app-horizontal-scroll>
+</ng-container>

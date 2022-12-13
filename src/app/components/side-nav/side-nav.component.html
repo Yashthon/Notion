@@ -1,0 +1,51 @@
+<nav class="main-menu">
+<!-- <nav class="main-menu"> -->
+  <div class="sidenav">
+  <ul>
+      <li>
+        <a>
+          <mat-icon class="zoom pos" routerLink="/home" matTooltip="Home">home</mat-icon>
+        </a>
+      </li>
+      <li class="has-subnav">
+        <a>
+          <mat-icon class="zoom" matTooltip="Genre">filter_list_alt</mat-icon>
+        </a>
+          
+      </li>
+      <li class="has-subnav">
+        <a>
+          <mat-icon class="zoom" routerLink="/fav" matTooltip="Liked">favorite</mat-icon>
+        </a>
+          
+      </li>
+      
+      <li class="has-subnav">
+        <a>
+          <mat-icon class="zoom" routerLink="/journal" matTooltip="Write">edit</mat-icon>
+        </a>
+         
+      </li>
+      <li>
+        <a>
+          <mat-icon class="zoom" routerLink="/profile" matTooltip="Profile">account_circle</mat-icon>
+        </a>
+      </li>
+      <li>
+        <a>
+          <mat-icon class="zoom" routerLink="/newsletter" matTooltip="Subscribe">notifications_active_harp</mat-icon>
+        </a>
+      </li>
+      
+  </ul>
+
+  <ul class="logout">
+      <li>
+        <a (click)="logout()">
+          <mat-icon class="zoom" matTooltip="Logout">logout</mat-icon>
+          </a>  
+      </li>  
+  </ul>
+</div>
+
+</nav>

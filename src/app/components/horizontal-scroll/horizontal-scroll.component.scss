@@ -1,0 +1,18 @@
+p {
+  font-family: Lato;
+}
+
+::ng-deep .mat-tab-header-pagination {
+    display: none !important;
+} 
+.comedyCard{
+  height: fit-content;
+  width: 95%;
+  left: 2.5%;
+  background-color: aliceblue;
+}
+mat-tab-group{
+  background-color: aliceblue;
+  margin-left: 2%;
+  margin-right: 2%;
+}

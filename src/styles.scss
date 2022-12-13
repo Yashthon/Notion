@@ -1,0 +1,46 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+  // background-color: #ffea00;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  // background-image:  url('../src/assets/images/bg_e.svg');
+  // background: fixed linear-gradient(45deg,#f200ff 0%,#ffba42 100%);
+  background: fixed linear-gradient(45deg,#1e50b5 53%,#fff 0%);
+  // background-image:  url('../src/assets/images/bg_e.svg');
+  // background-color: #4267B2;
+}
+
+.form-container {
+  display: block;
+  max-width: 400px;
+  margin: auto;
+  margin-top: 50px !important;
+  background: #fff;
+  padding: 48px;
+  border-radius: 16px;
+
+  mat-form-field {
+    width: 100%;
+  }
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.margin-top {
+  margin-top: 16px !important;
+}
+
+.text-center {
+  text-align: center;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

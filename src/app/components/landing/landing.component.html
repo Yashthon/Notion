@@ -1,0 +1,111 @@
+<app-nav></app-nav>
+<mat-grid-list cols="2" rowHeight="2:1" class="grid">
+  <mat-grid-tile class="column">
+    <div class="text-title">
+      Stay curious!
+    </div>
+    <div class="text-content">
+     Discover stories, Thinking and Expertise from writers on any topic.
+    </div>
+  </mat-grid-tile>
+
+  <mat-grid-tile class="tile-height column">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+<div class="content">
+  <div class="content__container">
+    <p class="content__container__text">
+      <u>BLOGS</u>: &nbsp;
+    </p>
+    
+    <ul class="content__container__list">
+      <li class="content__container__list__item"> Film</li>
+      <li class="content__container__list__item"> Sciene & Tech</li>
+      <li class="content__container__list__item"> &nbsp; Web Series</li>
+      <li class="content__container__list__item"> &nbsp; Anime</li>
+      <li class="content__container__list__item"> &nbsp; And Much More..</li>
+    </ul>
+  </div>
+</div>
+  </mat-grid-tile>
+</mat-grid-list>
+
+<mat-card style="padding: 40px; 
+margin-left: 40px;
+margin-right: 40px;
+border-radius: 10px;
+width: fit-content;
+/* background: linear-gradient(36deg,#fff 50%,#1e50b5 0%); */
+background-color: aliceblue;">
+      <mat-card-title style="font-size: xx-large; padding-top: 20px; text-align: center;">
+      <span>Trending Genres</span> <div class="underline"></div>
+     <br> <br>
+    </mat-card-title>
+    <br> <br>
+    <div class="container">
+      
+      <div class="gallery">
+          <figure class="gallery__item gallery__item--1 zoom container1">
+              <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2960&q=80" alt="Comedy" class="gallery__img">
+              <a routerLink="/comedy">
+                <div class="middle">
+                 <div class="text">Food</div>
+              </div>
+            </a>
+          </figure>
+
+
+          <figure class="gallery__item gallery__item--2 zoom container1">
+              <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2765&q=80" alt="Gallery image 2" class="gallery__img">
+              <a routerLink="/">
+                <div class="middle">
+                 <div class="text">  A.I</div>
+              </div></a>
+          </figure>
+
+          <figure class="gallery__item gallery__item--3 zoom container1">
+              <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2920&q=80" alt="Gallery image 3" class="gallery__img">
+              <a routerLink="/">
+                <div class="middle">
+                 <div class="text">  Technology</div>
+              </div></a>
+          </figure>
+
+          <figure class="gallery__item gallery__item--4 zoom container1">
+              <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2946&q=80" alt="Gallery image 4" class="gallery__img">
+              <a routerLink="/education">
+                <div class="middle">
+                 <div class="text">  Education</div>
+              </div></a>
+          </figure>
+
+          <figure class="gallery__item gallery__item--5 zoom container1">
+              <img src="https://images.unsplash.com/photo-1440404653325-ab127d49abc1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="Gallery image 5" class="gallery__img">
+              <a routerLink="/film">
+                <div class="middle">
+                 <div class="text">  Film</div>
+              </div></a>
+          </figure>
+
+          <figure class="gallery__item gallery__item--6 zoom container1">
+              <img src="https://images.unsplash.com/photo-1615986201152-7686a4867f30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1450&q=80" alt="Gallery image 6" class="gallery__img">
+              <a routerLink="/series">
+                <div class="middle">
+                 <div class="text">  Series</div>
+              </div></a>
+          </figure>
+          
+      </div>
+  </div>
+
+  <br><br>
+
+  <mat-card-title style="font-size: xx-large; padding-top: 20px; text-align: center;">
+     <span>Most Liked Blogs</span> <div class="underline"></div>
+    <br> <br>
+   </mat-card-title>
+   <br><br>
+
+   <app-most-liked></app-most-liked>
+
+</mat-card>

@@ -1,0 +1,66 @@
+h1, h2{
+    padding-left: 30px;
+    margin-top: 60px;
+}
+mat-card{
+    height: 300px;
+    background-color: #F0F8FF;
+}
+// div.scrollmenu {
+//     // background-color: #333;
+//     margin-top: -15px;
+//     margin-left: -5px;
+//     margin-right: -10px;
+//     background-color: transparent;
+//     overflow: auto;
+//     white-space: nowrap;
+//   }
+  
+//   div.scrollmenu a {
+//     display: inline-flex;
+//     color: black;
+//     background-color: #bfd4fa;
+//     text-align: center;
+//     padding: 14px;
+//     text-decoration: none;
+//     padding: 20px;
+
+//   }
+  
+//   div.scrollmenu a:hover {
+//     background-color: #a5c2f6;
+//   }
+
+.scroll-container {
+    // border: 2px solid silver;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  
+    &.hide-scrollbar {
+      overflow: auto;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  
+    &.show-scroll {
+      overflow: auto;
+    }
+  
+    div {
+        height: fit-content;
+        width: fit-content;
+      white-space: nowrap;
+      background: #D7E4FD;
+    //   border: 1px solid #efefef;
+    font-size: large;
+      border-radius: 12px;
+      margin: 5px;
+      padding: 10px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  
